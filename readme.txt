@@ -19,7 +19,7 @@ Addon create for "Job Board Manager" plugin to support company profile.
 
 
 ### Job Board Manager - Company Profile by http://pickplugins.com
-* [Live Demo!&raquo;](http://pickplugins.com/demo/job-board-manager/)
+* [Live Demo!&raquo;](http://www.pickplugins.com/demo/job-board-manager/company-profile/)
 
 <strong>Company Single page</strong>
 
