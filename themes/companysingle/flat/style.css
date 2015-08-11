@@ -17,7 +17,9 @@
   vertical-align: top;
   width: 50px;
 }
-
+.company-single .logo img {
+  width: 100%;
+}
 
 .company-single .name {
   display: inline-block;
@@ -54,6 +56,16 @@
 
 .company-single .meta-info .meta a {
   text-decoration: none;
+}
+
+
+.company-single .mission {
+  background: none repeat scroll 0 0 rgb(255, 255, 255);
+  font-size: 14px;
+  font-style: italic;
+  line-height: inherit;
+  margin: 20px 0;
+  padding: 10px;
 }
 
 .company-single .description {

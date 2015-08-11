@@ -65,10 +65,13 @@ class JobBoardManagerCompanyProfile{
 	public function job_bm_cp_front_scripts(){
 		
 		wp_enqueue_script('jquery');
+		wp_enqueue_script('jquery-ui-autocomplete');
+
 		wp_enqueue_style('job_bm_cp_style', job_bm_cp_plugin_url.'css/style.css');
 		
 		wp_enqueue_style('font-awesome', job_bm_cp_plugin_url.'css/font-awesome.css');
-		
+
+		wp_enqueue_script('my-autocomplete', plugins_url( '/admin/js/scripts.js' , __FILE__ ) , array( 'jquery' ));
 		//ParaAdmin
 		wp_enqueue_style('ParaAdmin', job_bm_cp_plugin_url.'ParaAdmin/css/ParaAdmin.css');
 		wp_enqueue_script('ParaAdmin', plugins_url( 'ParaAdmin/js/ParaAdmin.js' , __FILE__ ) , array( 'jquery' ));		
@@ -80,6 +83,7 @@ class JobBoardManagerCompanyProfile{
 		wp_enqueue_script('jquery');
 		wp_enqueue_script('jquery-ui-core');
 		wp_enqueue_script('jquery-ui-sortable');
+		wp_enqueue_script('jquery-ui-autocomplete');		
 
 		wp_enqueue_script('job_bm_cp_admin_js', plugins_url( '/admin/js/scripts.js' , __FILE__ ) , array( 'jquery' ));
 		wp_localize_script( 'job_bm_cp_admin_js', 'job_bm_cp_ajax', array( 'job_bm_cp_ajaxurl' => admin_url( 'admin-ajax.php')));

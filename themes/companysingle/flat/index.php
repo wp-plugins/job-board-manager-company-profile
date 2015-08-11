@@ -65,7 +65,13 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 	
 	$html .= '</div>'; // .meta-info	
 	
-	
+	if(!empty($job_bm_cp_mission)){
+		
+		$html .= '<div class="mission"><strong><i class="fa fa-rocket"></i>'.__('Mission: ','job_bm_cp').'</strong>'.$job_bm_cp_mission.'</div>';
+		
+		}
+
+		
 	$html .= '<div class="description">'.wpautop($company_post_data->post_content).'</div>';	
 		
 	$html .= '</div>'; // .continer-main	
