@@ -2,7 +2,7 @@
 /*
 Plugin Name: Job Board Manager Company Profile
 Plugin URI: http://paratheme.com
-Description: Awesome Resume Builder.
+Description: Awesome Company Profile for Job Board Manager.
 Version: 1.0.0
 Author: paratheme
 Author URI: http://paratheme.com
