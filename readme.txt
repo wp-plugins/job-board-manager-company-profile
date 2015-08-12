@@ -3,7 +3,7 @@
 	Donate link: http://paratheme.com
 	Tags:  Company Profile, Job Board Manager, Job Board, Job, Job Poster, job manager, job, job list, job listing, Job Listings, job lists, job management, job manager,
 	Requires at least: 4.1
-	Tested up to: 4.2.2
+	Tested up to: 4.2.4
 	Stable tag: 1.0.0
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,14 +12,13 @@
 
 == Description ==
 
-
-Addon create for "Job Board Manager" plugin to support company profile.
-
-###Job Board Manager https://wordpress.org/plugins/job-board-manager/
-
+Display available job from any company and display company information via single page.
+and display ajaxj list of predefined compnay list on job editing. 
 
 ### Job Board Manager - Company Profile by http://pickplugins.com
 * [Live Demo!&raquo;](http://www.pickplugins.com/demo/job-board-manager/company-profile/)
+* [Get Job Board Manager &raquo;](https://wordpress.org/plugins/job-board-manager/)
+
 
 <strong>Company Single page</strong>
 
