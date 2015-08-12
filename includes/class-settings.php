@@ -15,7 +15,7 @@ class class_job_bm_cp_settings  {
     public function __construct(){
 
 		//add_action( 'admin_menu', array( $this, 'admin_menu' ), 12 );
-		add_filter('job_bm_settings_options',array( $this, 'job_bm_cp_settings_options_extra'));
+		//add_filter('job_bm_settings_options',array( $this, 'job_bm_cp_settings_options_extra'));
 		
     }
 	

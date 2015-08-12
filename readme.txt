@@ -23,7 +23,7 @@ Addon create for "Job Board Manager" plugin to support company profile.
 
 <strong>Company Single page</strong>
 
-If you wan to display Company on single page like default post, you need to copy your theme single.php and rename to single-company.php
+If you want to display Company on single page like default post, you need to copy your theme single.php and rename to single-company.php
 
 you need to replace content section by following short-code
 

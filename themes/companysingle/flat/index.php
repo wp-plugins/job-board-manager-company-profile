@@ -74,6 +74,13 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 		
 	$html .= '<div class="description">'.wpautop($company_post_data->post_content).'</div>';	
 		
+		
+	$html .= '<div class="job-list-header">'.__('Jobs available from - '.$company_post_data->post_title.'','job_bm_locations').'</div>';		
+	$html .= do_shortcode('[job_list meta_keys="job_bm_company_name" company_name="'.$company_post_data->post_title.'"]');	
+		
+		
+		
+		
 	$html .= '</div>'; // .continer-main	
 	
 	$html .= '</div>'; // .company-single	
