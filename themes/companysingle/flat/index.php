@@ -38,30 +38,59 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 	$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($company_id), 'full' );
 	$thumb_url = $thumb['0'];	
 	
-	$html .= '<div class="thumb"><img src="'.$thumb_url.'" /></div>';	
-
-	$html .= '<div class="logo"><img src="'.$job_bm_cp_logo.'" /></div>';	
-
-	$html .= '<div class="name">'.$company_post_data->post_title.'<span class="tagline">'.$job_bm_cp_tagline.'</span></div>';		
+	if(!empty($thumb_url)){
+		$html .= '<div class="thumb"><img src="'.$thumb_url.'" /></div>';
+		}
+	
+	if(!empty($job_bm_cp_logo)){
+		$html .= '<div class="logo"><img src="'.$job_bm_cp_logo.'" /></div>';
+		}
+	
+	if(!empty($company_post_data->post_title)){
+		$html .= '<div class="name">'.$company_post_data->post_title.'<span class="tagline">'.$job_bm_cp_tagline.'</span></div>';	
+		}
+	
 
 	$html .= '</div>'; // .company-header	
 	
 	
 	
 	$html .= '<div class="continer-main">';	
-	$html .= '<div class="meta-info">';		
-	$html .= '<div class="meta"><strong><i class="fa fa-link"></i>'.__('Website: ','job_bm_cp').'</strong>'.$job_bm_cp_website.'</div>';
-	$company_type = '';
-	foreach($job_bm_cp_type as $type_key=>$type_name){
+	$html .= '<div class="meta-info">';	
 		
-		$company_type.= $type_name.', ';
+	if(!empty($job_bm_cp_website)){
+	$html .= '<div class="meta"><strong><i class="fa fa-link"></i>'.__('Website: ','job_bm_cp').'</strong>'.$job_bm_cp_website.'</div>';
+		}
+
+	
+	
+	$company_type = '';
+	
+	if(!empty($job_bm_cp_type)){
+
+		foreach($job_bm_cp_type as $type_key=>$type_name){
+			
+			$company_type.= $type_name.', ';
+			}
+	
+	
+			$html .= '<div class="meta"><strong><i class="fa fa-flag-o"></i>'.__('Type: ','job_bm_cp').'</strong>'.$company_type.'</div>';
+		}
+
+	if(!empty($job_bm_cp_founded)){
+		
+	$html .= '<div class="meta"><strong><i class="fa fa-calendar-o"></i>'.__('Founded: ','job_bm_cp').'</strong>'.$job_bm_cp_founded.'</div>';	
+	
+		}
+	if(!empty($job_bm_cp_size)){
+		
+		$html .= '<div class="meta"><strong><i class="fa fa-users"></i>'.__('Size: ','job_bm_cp').'</strong>'.$job_bm_cp_size.'</div>';
+		}
+	if(!empty($job_bm_cp_revenue)){
+		
+		$html .= '<div class="meta"><strong><i class="fa fa-money"></i>'.__('Revenue: ','job_bm_cp').'</strong>$'.$job_bm_cp_revenue.'</div>';
 		}
 	
-	$html .= '<div class="meta"><strong><i class="fa fa-flag-o"></i>'.__('Type: ','job_bm_cp').'</strong>'.$company_type.'</div>';
-	
-	$html .= '<div class="meta"><strong><i class="fa fa-calendar-o"></i>'.__('Founded: ','job_bm_cp').'</strong>'.$job_bm_cp_founded.'</div>';		
-	$html .= '<div class="meta"><strong><i class="fa fa-users"></i>'.__('Size: ','job_bm_cp').'</strong>'.$job_bm_cp_size.'</div>';
-	$html .= '<div class="meta"><strong><i class="fa fa-money"></i>'.__('Revenue: ','job_bm_cp').'</strong>$'.$job_bm_cp_revenue.'</div>';	
 	
 	$html .= '</div>'; // .meta-info	
 	
@@ -71,8 +100,10 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
 		
 		}
 
-		
-	$html .= '<div class="description">'.wpautop($company_post_data->post_content).'</div>';	
+	if(!empty($company_post_data->post_content)){
+		$html .= '<div class="description">'.wpautop($company_post_data->post_content).'</div>';
+		}
+	
 		
 		
 	$html .= '<div class="job-list-header">'.__('Jobs available from - '.$company_post_data->post_title.'','job_bm_locations').'</div>';		
